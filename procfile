@@ -1,0 +1,1 @@
+web: gunicorn manoj wsgi --log-file -
