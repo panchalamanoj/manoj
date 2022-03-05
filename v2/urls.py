@@ -1,6 +1,6 @@
-from django.urls import URLPattern, path
-from . import views
+from django.urls import path
+from .import views
 
-URLPattern = [
-    path("", views.register,name="register")
+urlpatterns = [
+      path("register", views.register, name="register"),
 ]
