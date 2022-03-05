@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'manoj.urls'
+ROOT_URLCONF = 'manoj.urls','v2.urls'
 
 TEMPLATES = [
     {
