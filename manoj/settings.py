@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-mz*!lg!681elyzi90y6#mv(bg)wrqm-g1#_k-_e560u#iln5o5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '.mansta.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.mansta.heroku.com']
 
 
 # Application definition
