@@ -1,1 +1,1 @@
-web: gunicorn manoj wsgi
+web: gunicorn manoj.wsgi
