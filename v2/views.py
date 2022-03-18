@@ -20,3 +20,10 @@ def register (request):
 
 def login (request):
     return render(request,"login.html")
+
+def
+	
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
+
+	
