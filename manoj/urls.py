@@ -19,6 +19,6 @@ from v2 import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('v20.urls')),
+    path('', include('v2.urls')),
     
 ]
