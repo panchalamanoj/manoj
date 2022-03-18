@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'mansta', 
         'USER': 'mansta', 
         'PASSWORD': 'p.manoj123',
-        'HOST': 'mansta.heroku.com', 
+        'HOST': 'https://mansta.herokuapp.com/register/', 
         'PORT': '5432',
     }
 }
