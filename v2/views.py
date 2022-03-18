@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User, auth
     
 def register (request):
-        if request.method == 'POST':
+    if request.method == 'POST':
 	    first_name = request.POST["first_name"] 
 	    last_name = request.POST["last_name"]
 	    username = request.POST["username"]
@@ -15,7 +15,7 @@ def register (request):
 	    user.save();
 	    print("user created")
 	    return redirect('/login')
-        else:
+    else:
 	    return render(request, "register.html")
 
 def login (request):
