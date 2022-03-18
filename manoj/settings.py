@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'manoj.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mansta', 
+        'USER': 'mansta', 
+        'PASSWORD': 'p.manoj123',
+        'HOST': 'mansta.heroku.com', 
+        'PORT': '5432',
     }
 }
 WHITENOISE_USE_FINDERS = True
