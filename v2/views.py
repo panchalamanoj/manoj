@@ -15,7 +15,7 @@ def register (request):
 		user.save();
 		return redirect('login.html')
 	else:
-		return render(request, "/")
+		return render(request, "/register")
 
 def login (request):
     return render(request,"login.html")
