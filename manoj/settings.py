@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'mansta', 
         'USER': 'postgres', 
         'PASSWORD': 'p.manoj123',
-        'HOST': 'localhost',
+        'HOST': 'https://mansta.herokuapp.com/',
         'PORT': '5432',
     }
 }
