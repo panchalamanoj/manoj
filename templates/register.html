@@ -7,34 +7,29 @@
 <body>
      <div class="login-box">
         <h1>Registration</h1>
-        <form  method="post">
-         {% csrf_token %}
-       <div class='textbox'>
+        <form action= "register" method="post">
+        {% csrf_token %}
+        <div class='textbox'>
                <i class="fas fa-user"></i>
                <input type='text' name='username' placeholder='username' required><br>
-       </div>
-       <div class='textbox'>
+        </div>
+        <div class='textbox'>
                <i class="fas fa-at"></i>
                <input type='email' name='email' placeholder='email' required><br>
-       </div>
-       <div class='textbox'>
+        </div>
+        <div class='textbox'>
                <i class="fas fa-lock"></i>
                <input type='password'name='password1' placeholder='password' required><br>
-       </div>
-       <div class='textbox'>
+        </div>
+        <div class='textbox'>
                <i class="fas fa-lock"></i>
                <input type='password' name='password2' placeholder='confirm password' required><br>
-       </div>
+        </div>
                <input class="checkbox" type="checkbox">accept terms and conditions<br>
                <a href="/login">already have account </a><br>
-               <input class="btn" type='submit' value="Register">
-         <div>
-               {%  for message in messages%}
-               <h3>{{message}}</h3>
-               {% endfor %}
-         </div>  
+               <input class="btn" type='submit' value="Register">  
                 
-        </form>
+         </form>
           
       </div>  
 </body>
