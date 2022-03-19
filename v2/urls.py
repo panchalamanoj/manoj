@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . immport views
+from . import views
 
 urlpatterns = [
     path('', views.index, name='home'),
