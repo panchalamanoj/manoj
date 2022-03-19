@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'mansta', 
         'USER': 'mansta', 
         'PASSWORD': 'p.manoj123',
-        'HOST': '127.0.0.1', 'db.mansta.com',
+        'HOST': '127.0.0.1', '54.86.9.50',
         'PORT': '5432',
     }
 }
