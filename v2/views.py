@@ -15,7 +15,7 @@ def register (request):
 	    user = User.objects.create_user(username = username, password = password1,email = email, first_name = first_name,last_name = last_name)
 	    user.save();
 	    print("user created")
-	    return redirect('')
+	    return redirect('/')
 	
     else:
 	    return render(request, "register.html")
