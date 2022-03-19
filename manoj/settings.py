@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'manoj.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'mansta', 
-        'USER': 'mansta', 
+        'USER': 'postgres', 
         'PASSWORD': 'p.manoj123',
-        'HOST': '127.0.0.1', '54.86.9.50',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
