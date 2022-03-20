@@ -11,8 +11,8 @@ def register(request):
                user = form.cleaned_data.get('username')
                messages.success(request, 'account was created for'+ user)
                return redirect('login')
-       else:
-           context = {'form':form}
+              
+       context = {'form':form}
        return render(request, 'register.html' , context)
                
 def login(request):
