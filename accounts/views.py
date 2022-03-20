@@ -17,13 +17,13 @@ def register(request):
 def login(request):
 
     if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
+        username = request.POST.get('username')
+        password = request.POST.get('password')
 
-        user = auth.authenticate(username=username, password=password)
+        user = authenticate(request, username=username, password=password)
 
         if user is not None:
-            auth.login(request, user)
+            login(request, user)
             redirect('home')
         else:
             messages.info(request, 'Username or password is incorrect')
