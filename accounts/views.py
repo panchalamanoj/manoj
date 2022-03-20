@@ -4,22 +4,16 @@ from django.contrib.auth.models import User, auth
 from django.contrib import messages
 
 def register(request):
-
-    if request.method == 'POST':
-        first_name = request.POST['first_name']
-        last_name = request.POST['last_name']
-        username = request.POST['username']
-        email = request.POST['email']
-        password1 = request.POST['password1']
-        password2 = request.POST['password2']
-
-        user = User.objects.create_user(username=username, password1=password1, first_name=first_name, last_name=last_name, email=email)
-        user.save();
-        print('user created')
-        return redirect('home')
-
-    else:
-        return render(request, 'register.html')
+       form = CreateUserForm(request.POST)
+       if  request.method == 'POST':
+           if form.is_valid():
+               form.save()
+               user = form.cleaned_data.get('username')
+               messages.success(request, 'account was created for'+ user)
+               return redirect('login')
+       else:
+           context = {'form':form}
+       return render(request, 'register.html' , context)
                
 def login(request):
 
