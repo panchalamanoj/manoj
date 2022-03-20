@@ -7,7 +7,7 @@
 <body>
      <div class="login-box">
         <h1>Registration</h1>
-        <form action="" method="POST">
+        <form  method="post">
             {% csrf_token %}
             <div class='textbox'>
                   <i class="fas fa-user"></i>
@@ -25,7 +25,7 @@
                    <i class="fas fa-lock"></i>
                    {{form.password2}}
             </div>
-                   <input class="checkbox" type="checkbox">accept terms and conditions<br>
+                   <input class="checkbox" type="checkbox">accept terms and co ditions<br>
                    <a href="/login">already have account </a><br>
                    <input class="btn" type='submit' value="Register">
             <div>
@@ -38,4 +38,4 @@
           
       </div>  
 </body>
-</html>
+</html>          
