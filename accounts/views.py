@@ -30,6 +30,9 @@ def login(request):
         if user is not None:
             login(request, user)
             redirect('')
+        else:
+            messages.info(request, 'Username or password is incorrect')  
+              
     context = {}        
     return render(request,'login.html', context)
 
