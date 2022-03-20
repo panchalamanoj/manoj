@@ -28,7 +28,7 @@ def login(request):
         user = authenticate(request, username=username, password=password)
 
         if user is not None:
-            login(request, username)
+            login(request, user)
             redirect('')
     context = {}        
     return render(request,'login.html', context)
