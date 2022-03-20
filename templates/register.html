@@ -11,21 +11,21 @@
             {% csrf_token %}
             <div class='textbox'>
                   <i class="fas fa-user"></i>
-                  <input type='text' name='username' placeholder='username' required><br>
+                  {{form.username}}
             </div>
             <div class='textbox'>
                   <i class="fas fa-at"></i>
-                  <input type='email' name='email' placeholder='email' required><br>
+                  {{form.email}}
             </div>
             <div class='textbox'>
                   <i class="fas fa-lock"></i>
-                  <input type='password'name='password1' placeholder='password' required><br>
+                  {{form.password1}}
             </div>
             <div class='textbox'>
                    <i class="fas fa-lock"></i>
-                   <input type='password' name='password2' placeholder='confirm password' required><br>
+                   {{form.password2}}
             </div>
-                   <input class="checkbox" type="checkbox">accept terms and co ditions<br>
+                   <input class="checkbox" type="checkbox">accept terms and conditions<br>
                    <a href="/login">already have account </a><br>
                    <input class="btn" type='submit' value="Register">
             <div>
