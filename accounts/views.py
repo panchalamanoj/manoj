@@ -1,24 +1,25 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User, auth
-
-
-from .forms import CreateUserForm
 from django.contrib import messages
 
 def register(request):
-       if  request.method == 'POST':
-           form = CreateUserForm(request.POST)
-           if form.is_valid():
-               form.save()
-               user = form.cleaned_data.get('username')
-               messages.success(request, 'account was created for '+ user)
-               return redirect('login')
-       else:
-           form = CreateUserForm()
-       return render(request, 'register.html' , {'form': form})
+
+    if request.method == 'POST':
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        username = request.POST['username']
+        email = request.POST['email']
+        password1 = request.POST['password1']
+        password2 = request.POST['password2']
+
+        user = User.objects.create_user(username=username, password1=password1, first_name=first_name, last_name=last_name, email=email)
+        user.save();
+        print('user created')
+        return redirect('home')
+
+    else:
+        return render(request, 'register.html')
                
 def login(request):
 
