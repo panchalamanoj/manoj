@@ -19,7 +19,18 @@ def register(request):
        return render(request, 'register.html' , {'form': form})
                
 def login(request):
-    return render(request,'login.html')
+
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, username)
+            redirect('')
+    context = {}        
+    return render(request,'login.html', context)
 
 
 def index (request):
