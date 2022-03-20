@@ -29,9 +29,7 @@
                    <a href="/login">already have account </a><br>
                    <input class="btn" type='submit' value="Register">
             <div>
-                   {%  for message in messages%}
-                   <h3>{{message}}</h3>
-                   {% endfor %}
+                  {{ form.errors }}
             </div>  
                 
         </form>
