@@ -4,15 +4,14 @@ from django.contrib.auth.models import User, auth
 from django.contrib import messages
 
 def register(request):
-       form = CreateUserForm(request.POST)
        if  request.method == 'POST':
+           form = CreateUserForm(request.POST)
            if form.is_valid():
                form.save()
-               user = form.cleaned_data.get('username')
-               messages.success(request, 'account was created for'+ user)
                return redirect('login')
-              
-       return render(request, 'register.html' , {'form':form})
+       else:
+           form = CreateUserForm()
+       return render(request, 'register.html' , {'form': form})
                
 def login(request):
 
